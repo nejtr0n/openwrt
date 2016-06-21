@@ -6,4 +6,4 @@ USER openwrt
 RUN git clone git://git.openwrt.org/15.05/openwrt.git /home/openwrt/openwrt
 WORKDIR /home/openwrt/openwrt
 RUN ./scripts/feeds update -a && ./scripts/feeds install -a
-RUN make prereq && make tools/install && make toolchain/install
+RUN make prereq && make -j1 tools/install && make -j1 toolchain/install
