@@ -24,4 +24,5 @@ jobs:
       - name: 'Build builder image'
         run: |
           docker build . --tag ghcr.io/nejtr0n/openwrt:latest --tag ghcr.io/nejtr0n/openwrt:latest-$(date +%s)
-          docker push ghcr.io/nejtr0n/openwrt:latest ghcr.io/nejtr0n/openwrt:latest-$(date +%s)
+          docker push ghcr.io/nejtr0n/openwrt:latest
+          docker push ghcr.io/nejtr0n/openwrt:latest-$(date +%s)
